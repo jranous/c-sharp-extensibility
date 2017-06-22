@@ -2,6 +2,7 @@
 using System.Windows;
 using PersonRepository.Service;
 using PersonRepository.CSV;
+using PersonRepository.SQL;
 
 namespace PeopleViewer
 {
@@ -39,6 +40,14 @@ namespace PeopleViewer
 
         private void SQLFetchButton_Click(object sender, RoutedEventArgs e)
         {
+            ClearListBox();
+
+            IPersonRepository repository = new SQLRepository();
+            var people = repository.GetPeople();
+            foreach (var person in people)
+                PersonListBox.Items.Add(person);
+
+            ShowRepositoryType(repository);
 
         }
 

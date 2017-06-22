@@ -109,6 +109,10 @@
       <Project>{1593e144-6e56-4408-b8b5-0ebea2553df6}</Project>
       <Name>PersonRepository.Service</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PersonRepository.SQL\PersonRepository.SQL.csproj">
+      <Project>{003702d8-e922-4539-80d4-15aab22ff29d}</Project>
+      <Name>PersonRepository.SQL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
